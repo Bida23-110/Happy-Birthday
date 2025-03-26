@@ -4,65 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Abbie!</title>
-     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 3em;
-            color: #ff69b4; /* Hot pink */
-        }
-        p {
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-        .birthday-message {
-            font-size: 1.2em;
-            color: #555;
-        }
-        .celebrate {
-            font-size: 2em;
-            color: #ff4500; /* Orange red */
-            margin-top: 30px;
-        }
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 20px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="surprise.html">Surprise</a>
+        <a href="messages.html">Messages</a>
+    </div>
 
     <h1>Happy Birthday, Abbie!</h1>
     <p>Welcome to your special birthday celebration website!</p>
     <p class="birthday-message">Today, we celebrate you and all the joy you bring into our lives.</p>
     <p class="celebrate">Let's make this day unforgettable!</p>
     
-    <button class="button" onclick="showMessage()">Click for a Surprise!</button>
-    <p id="surpriseMessage" class="hidden">🎉 Wishing you a day filled with love, laughter, and joy! 🎂</p>
+    <!-- Add an image here -->
+    <img src="HBD/IMG-20240407-WA0077.jpg" alt="Birthday Celebration" class="birthday-image">
 
-    <script>
-        function showMessage() {
-            document.getElementById('surpriseMessage').classList.toggle('hidden');
-        }
-    </script>
-
+    <a href="surprise.html" class="button">Click for a Surprise!</a> <!-- Link to the surprise page -->
+    
 </body>
 </html>
