@@ -93,3 +93,20 @@ p {
 .message-container {
     margin: 20px 0;
 }
+.content-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0;
+}
+
+.text-container {
+    max-width: 400px; /* Limit the width of the text container */
+    margin-right: 20px; /* Space between text and image */
+}
+
+.birthday-image {
+    width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
