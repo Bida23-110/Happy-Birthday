@@ -20,7 +20,6 @@
             text-align: center;
             padding: 20px;
             flex-direction: column;
-            position: relative; /* For absolute positioning of blinking text */
         }
 
         video {
@@ -28,16 +27,6 @@
             max-width: 600px;
             margin-top: 20px;
             display: none; /* Hide video initially */
-            filter: blur(0); /* Initial blur */
-            animation: glitch 1s infinite; /* Glitch effect */
-        }
-
-        @keyframes glitch {
-            0% { filter: blur(0); }
-            25% { filter: blur(5px); }
-            50% { filter: blur(0); }
-            75% { filter: blur(5px); }
-            100% { filter: blur(0); }
         }
 
         .button {
@@ -49,18 +38,6 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 20px;
-        }
-
-        .blinking-text {
-            display: none; /* Initially hidden */
-            font-size: 2rem;
-            color: #ff69b4; /* Pink color */
-            animation: blink 1s infinite; /* Blinking effect */
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
         }
     </style>
 </head>
@@ -77,21 +54,12 @@
     <source src="2025-01-25-115348245.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-<div id="blinkingText" class="blinking-text">Happy Birthday Abbie</div>
 
 <script>
     function playVideo() {
         const video = document.getElementById('birthdayVideo');
-        const blinkingText = document.getElementById('blinkingText');
-        
-        video.style.display = 'block';
-        video.play();
-
-        // Show blinking text after video ends
-        video.onended = function() {
-            video.style.display = 'none'; // Hide video after it ends
-            blinkingText.style.display = 'block'; // Show blinking text
-        };
+        video.style.display = 'block'; // Show the video
+        video.play(); // Play the video
     }
 </script>
 
