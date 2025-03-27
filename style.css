@@ -4,6 +4,16 @@ body {
     color: #f9f9f9; /* Light text color for contrast */
     text-align: center;
     padding: 20px;
+    animation: fadeIn 1s ease-in; /* Fade-in effect for the body */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .navbar {
@@ -52,16 +62,18 @@ p {
     height: 350px; /* Set a standard height */
     border-radius: 10px; /* Optional: adds rounded corners */
     margin: 10px; /* Space around images */
+    animation: slideIn 1s ease-out; /* Slide-in effect for the image */
 }
 
-.left-image {
-    float: right; /* Float the first image to the left */
-    margin-right: 20px; /* Space between image and text */
-}
-
-.right-image {
-    float: right; /* Float the second image to the right */
-    margin-left: 20px; /* Space between image and text */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .sweet-message {
@@ -69,6 +81,16 @@ p {
     color: #f9f9f9; /* Light text color */
     text-align: left; /* Align text to the left */
     max-width: 400px; /* Limit the width of the text container */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    animation: textReveal 1s forwards; /* Text reveal animation */
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
 }
 
 .button {
@@ -88,4 +110,17 @@ p {
 
 .button:hover {
     background-color: #6a006a; /* Darker purple on hover */
+    animation: bounce 0.5s; /* Bounce effect on hover */
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+        }
