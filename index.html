@@ -6,8 +6,84 @@
     <title>Happy Birthday Abbie!</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        img {
-            float: left; /* This will float the image to the left */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light background for contrast */
+            color: #333; /* Dark text color */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #4CAF50; /* Green background */
+            overflow: hidden;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            display: flex; /* Use flexbox for inline layout */
+            justify-content: center; /* Center the items */
+        }
+
+        .navbar a {
+            display: inline-block; /* Ensure links are inline */
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049; /* Darker green on hover */
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff69b4; /* Hot pink */
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .content-container {
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            margin: 20px 0; /* Space between content */
+        }
+
+        .birthday-image {
+            width: 250px; /* Set a standard width */
+            height: 350px; /* Set a standard height */
+            border-radius: 10px; /* Optional: adds rounded corners */
+            margin-right: 20px; /* Space between image and text */
+        }
+
+        .text-container {
+            max-width: 600px; /* Limit the width of the text container */
+            text-align: left; /* Align text to the left */
+        }
+
+        .button {
+            background-color: #800080; /* Purple background */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #6a006a; /* Darker purple on hover */
         }
     </style>
 </head>
@@ -26,7 +102,7 @@
     <p class="celebrate">Let's make this day unforgettable! Cheers to you, Abbie! May your 19th year be your best one yet! 🥳💖</p>
 
     <div class="content-container">
-        <img src="HBD/IMG-20240407-WA0077.jpg" alt="Birthday Celebration" class="birthday-image" width="250" height="350"> <!-- Corrected width and height -->
+        <img src="HBD/IMG-20240407-WA0077.jpg" alt="Birthday Celebration" class="birthday-image">
 
         <div class="text-container">
             <p class="sweet-message">
@@ -34,17 +110,4 @@
                 You are not just a friend; you are my Abbiedoza, the one who brings light and laughter into my life. 
                 Your smile is like sunshine, brightening even the darkest days. 
                 
-                As you celebrate another year of life, I hope you remember how loved you are. 
-                
-                You are my Blessing, a precious gift that I cherish every day. Your kindness and compassion inspire everyone around you, and I am so grateful to have you in my life. 
-                Cupcake, may this birthday be filled with all the joy and happiness you deserve. I wish you all your heart's desires and more. 
-                
-                May your dreams take flight and your spirit soar high. Here's to you, Abbie, on your special day! Let's make unforgettable memories together!
-            </p>
-        </div>
-    </div>
-
-    <a href="surprise.html" class="button">Click for a Surprise!</a> <!-- Link to the surprise page -->
-    
-</body>
-</html>
+                As you celebrate another year of life, I hope you remember
