@@ -1,111 +1,185 @@
 <!DOCTYPE html>
- 
 <html lang="en">
- 
 <head>
- 
     <meta charset="UTF-8">
- 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
     <title>Surprise for Abbie!</title>
- 
     <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
- 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark background */
+            color: #f9f9f9; /* Light text color for contrast */
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-in; /* Fade-in effect for the body */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .navbar {
+            background-color: #4CAF50; /* Green background */
+            overflow: hidden;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            display: flex; /* Use flexbox for inline layout */
+            justify-content: center; /* Center the items */
+        }
+
+        .navbar a {
+            display: inline-block; /* Ensure links are inline */
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049; /* Darker green on hover */
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff69b4; /* Hot pink */
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .memory-image {
+            width: 250px; /* Set a standard width */
+            height: 350px; /* Set a standard height */
+            border-radius: 10px; /* Optional: adds rounded corners */
+            margin: 10px; /* Space around images */
+            animation: slideIn 1s ease-out; /* Slide-in effect for the image */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .image-message-container {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            margin: 20px 0; /* Space between each image-message pair */
+            animation: fadeIn 1s ease-in; /* Fade-in effect for the message container */
+        }
+
+        .sweet-message {
+            font-size: 1.2em;
+            color: #f9f9f9; /* Light text color */
+            text-align: left; /* Align text to the left */
+            max-width: 400px; /* Limit the width of the text container */
+            margin-left: 20px; /* Space between image and text */
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            animation: textReveal 1s forwards; /* Text reveal animation */
+        }
+
+        @keyframes textReveal {
+            to {
+                opacity: 1; /* Fade in */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
+
+        .button {
+            background-color: #800080; /* Purple background */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #6a006a; /* Darker purple on hover */
+        }
+
+        /* Individual Memory Layouts */
+        .memory-1 {
+            flex-direction: row; /* Image on the left, text on the right */
+        }
+
+        .memory-2 {
+            flex-direction: row-reverse; /* Image on the right, text on the left */
+        }
+
+        .memory-3 {
+            flex-direction: column; /* Stack image and text */
+            align-items: center; /* Center items */
+        }
+    </style>
 </head>
- 
 <body>
- 
 
- 
     <div class="navbar">
- 
         <a href="index.html">Home</a>
- 
         <a href="surprise.html">Surprise</a>
- 
         <a href="messages.html">Message</a>
- 
     </div>
- 
 
- 
     <h1>Surprise, Abbie!</h1>
- 
     <p>Yerr what a wow. This dope neh? Yeah!</p>
- 
-
- 
 
     <div class="image-container">
- 
-
-        <img src="HBD/IMG-20241224-WA0019.jpg" alt="Memory 1" class="memory-image" width="250" height="350" >
- 
-
-        <img src="HBD/IMG-20250104-WA0076.jpg" alt="Memory 2" class="memory-image" width="250" height="350" >
- 
-
-        <img src="HBD/IMG-20240924-WA0035.jpg" alt="Memory 3" class="memory-image" width="250" height="350"> 
- 
+        <img src="HBD/IMG-20241224-WA0019.jpg" alt="Memory 1" class="memory-image">
+        <img src="HBD/IMG-20250104-WA0076.jpg" alt="Memory 2" class="memory-image">
+        <img src="HBD/IMG-20240924-WA0035.jpg" alt="Memory 3" class="memory-image">
+    </div>
 
     <!-- First Image and Message -->
- 
-
-    <div class="image-message-container">
- 
-
+    <div class="image-message-container memory-1">
         <img src="HBD/IMG-20240811-WA0020.jpg" alt="Memory 1" class="memory-image">
- 
-
-        <p class="sweet-message">Abbie, you are truly beautiful inside and out. 
-         Your smile lights up every room, and your kindness touches everyone you meet.</p>
- 
-
+        <p class="sweet-message">Abbie, you are truly beautiful inside and out. Your smile lights up every room, and your kindness touches everyone you meet.</p>
+        <a href="#memory2" class="button">Next Memory</a> <!-- Link to the next memory -->
     </div>
- 
-
-
- 
 
     <!-- Second Image and Message -->
- 
-
-    <div class="image-message-container">
- 
-
+    <div class="image-message-container memory-2" id="memory2">
         <img src="HBD/IMG-20240813-WA0107.jpg" alt="Memory 2" class="memory-image">
- 
-
-        <p class="sweet-message">You mean the world to me, and I am so grateful for every moment we share.
-         Your friendship is a treasure that I cherish deeply.</p>
- 
-
+        <p class="sweet-message">You mean the world to me, and I am so grateful for every moment we share. Your friendship is a treasure that I cherish deeply.</p>
+        <a href="#memory3" class="button">Next Memory</a> <!-- Link to the next memory -->
     </div>
- 
-
-
- 
 
     <!-- Third Image and Message -->
- 
-
-    <div class="image-message-container">
- 
-
+    <div class="image-message-container memory-3" id="memory3">
         <img src="HBD/IMG-20240924-WA0035.jpg" alt="Memory 3" class="memory-image">
- 
-
         <p class="sweet-message">Happy 19th Birthday, Abbie! May this year bring you as much joy and happiness as you bring to everyone around you!</p>
- 
+        <a href="messages.html" class="button">Finish</a> <!-- Link back to the main page -->
     </div>
- 
 
- 
-    <a href="messages.html" class="button">Next</a> <!-- Link back to the main page -->
- 
-
- 
 </body>
- 
 </html>
