@@ -7,26 +7,47 @@ body {
 }
 
 .navbar {
+
     background-color: #4CAF50; /* Green background */
+
     overflow: hidden;
+
     padding: 10px 0;
+
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    display: flex; /* Use flexbox for inline layout */
+
+    justify-content: center; /* Center the items */
+
 }
+
 
 .navbar a {
-    float: center;
-    display: block;
+
+    display: inline-block; /* Ensure links are inline */
+
     color: white;
+
     text-align: center;
+
     padding: 14px 20px;
+
     text-decoration: none;
+
     font-size: 18px;
+
     transition: background-color 0.3s, color 0.3s;
+
 }
 
+
 .navbar a:hover {
+
     background-color: #45a049; /* Darker green on hover */
+
     color: white;
+
 }
 
 h1 {
